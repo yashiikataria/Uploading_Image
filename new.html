@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <header>
+        <p class="modify"> MODIFY IMAGE</p>
+       
+
+    </header>
+   
+        <p class="dragHeader">SELECT  , DRAG  OR DROP  AN IMAGE HERE</p>
+
+
+<div class="main">
+    
+    <div class="dragBox">
+       <!-- <span class="dragBox" > -->
+        <label for="uploadFile" class="btn btn-primary">Upload Image</label>
+        
+        <br>
+        OR
+        <br>
+        Drag and Drop image here  
+        <input type="file" onChange="dragNdrop(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile"  />
+      <!-- </span> -->
+    </div>
+
+
+    <div class="UrlDiv">
+        <br>
+        <button id="myBtn">URL</button> 
+        <br> Or Enter a url<br><br>
+       
+        <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+             <form>
+                <label for="URL" class="urltext"> Enter Your URL</label><br>
+                <br>
+                <input type="text" id="urlImage" class="url" name="url" >
+                <img src="assets/icons8-play-50.png" class="sendUrlBtn"  height="15px" >
+               
+              </form>
+        </div>
+       </div>
+    </div>
+
+</div>
+  <div class="PreviewImage" id="previewImg" ondrop="dropSample(event)" ondragover="allowDrop(event)">
+         <img class="imageSample" />
+     </div>
+       
+    <div class="flex-container">
+       <img id="drag1" src="assets/mountain.jpg" draggable="true" ondragstart="dragSample(event)" class="images" >
+       <img id="drag2" src="assets/nyc.jpg" draggable="true" ondragstart="dragSample(event)" class="images">
+       <img id="drag3" src="assets/girl.jpg" draggable="true" ondragstart="dragSample(event)"  class="images">
+       
+    </div>
+
+    <p class="imagesBottom">No Image? Try One Of These</p>
+
+
+       <label for="UpscalingImages" class="UpscalingText">UPSCALING:</label>
+       <select name="upscaling" class="UpscaleImages">
+        <option value="2x">2X</option>
+         <option value="4x">4X</option>
+        </select>
+    
+        <button class="button">DOWNLOAD</button>
+       
+     
+</div>
+        
+    <footer>
+        <div class="footer">
+            <p class="copyright">Copyright © 2001-2022  Digital Experience,All rights reserved.</p>
+        </div>
+
+    </footer>
+
+<script src="drag.js"></script>
+
+</body>
+</html>
